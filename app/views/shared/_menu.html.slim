@@ -1,0 +1,100 @@
+nav.navbar.fixed-top.navbar-expand-lg.navbar-dark.bg-dark
+  .container-fluid
+    a.navbar-brand[href="#"]
+      | T-R
+    button.navbar-toggler[type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"]
+      span.navbar-toggler-icon
+    #navbarSupportedContent.collapse.navbar-collapse
+      ul.navbar-nav.me-auto.mb-2.mb-lg-0
+        li.nav-item
+        = link_to "HOME", root_path, class: ("nav-link rounded #{" active text-dark" if current_page?(root_path)}")
+
+          
+          
+        li.nav-item
+          =link_to "Haushaltservice", haushaltservice_path,class: ("nav-link rounded #{" active text-dark" if current_page?(haushaltservice_path)}")          
+        li.nav-item
+          =link_to "Planungen & 3D Architektur", root_path, class: "nav-link"
+        li.nav-item.dropdown
+          a#navbarDropdown.nav-link.dropdown-toggle[href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"]
+            |  Renovationen & Umbau 
+          ul.dropdown-menu[aria-labelledby="navbarDropdown"]
+            li
+              a.dropdown-item[href="#"]
+                | Elektroinstallationen  & Modernisierungen
+            li
+              hr.dropdown-divider
+            li
+              a.dropdown-item[href="#"]
+                | Installatör & Sanitärarbeiten
+            li
+              hr.dropdown-divider
+            li
+              a.dropdown-item[href="#"]
+                | BODENBELÄGE Parkett  & Laminat
+            li
+              hr.dropdown-divider
+            li
+              a.dropdown-item[href="#"]
+                | FLIESEN VERLEGEN Boden  & Wandfliesen
+            li
+              hr.dropdown-divider
+            li
+              a.dropdown-item[href="#"]
+                | Trockenbau Wandaufbau  &  Zwischendecken
+        li.nav-item.dropdown
+          a#navbarDropdown.nav-link.dropdown-toggle[href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"]
+            |  Service & Montagedienstleisstungen 
+          ul.dropdown-menu[aria-labelledby="navbarDropdown"]
+            li
+              a.dropdown-item[href="#"]
+                | Servicedienstleistungen
+          
+            li
+              a.dropdown-item[href="#"]
+                | Netzwerktechnik
+          
+            li
+              a.dropdown-item[href="#"]
+                | Lampenmontagen
+          
+            li
+              a.dropdown-item[href="#"]
+                | Vorhangschienen & Karnischen
+        
+            li
+              a.dropdown-item[href="#"]
+                | Wasserhanen & Abflüsse
+          
+            li
+              a.dropdown-item[href="#"]
+                | Antennen & Satellitanlagen
+        li.nav-item
+          a.nav-link[href="#"]
+            | Massmöbel & Zusammenbau
+      form.d-flex
+        input.form-control.me-2[type="search" id="search" placeholder="Search" aria-label="Search"]
+        button.btn.btn-outline-success[type="submit"]
+          | Search
+
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
