@@ -3,5 +3,5 @@ import "@hotwired/turbo-rails"
 import "controllers"
 import "popper"
 import "bootstrap"
-import "./index2"
+import "custom"
 //= require jquery

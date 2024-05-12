@@ -6,7 +6,7 @@ set :stages, %w(production)
 set :default_stage, "production"
 set :use_sudo, true
 set :application, "handwerk"
-set :repo_url, "https://github.com/Sediqwe/handwerk.git"
+set :repo_url, "https://github.com/Sediqwe/technoim.git"
 set :branch, "main"
 set :deploy_to, "/var/www/handwerk"
 set :keep_releases, 3
