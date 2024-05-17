@@ -71,4 +71,13 @@
     color: red;
     height: 100px;
   }
+
+  ul.custom-list {
+    list-style-type: none;
+}
+ul.custom-list li::before {
+    content: '*';
+    margin-right: 8px;
+    color: black;
+}
   
