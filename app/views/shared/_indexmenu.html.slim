@@ -1,10 +1,12 @@
-.row.text-dark.freeman-regular.m-3
-    .col.text-center
+.row.text-dark.freeman-regular.m-3 style="padding-right: 40px;"
+    
+    .col.text-center.shadow.shadow-4
         =link_to haushaltservice_path, class:"nu text-black" do |service|
+        
             = image_tag  "img1.png", size: "116x116"
             br
             |Service »
-    .col.text-center
+    .col.text-center.shadow.shadow-4
         =link_to root_path, class:"nu text-black" do |elektro|
             = image_tag  "img2.png", size: "116x116"
             br
@@ -20,7 +22,7 @@
             br
             |Boden »
     .col.text-center
-        =link_to root_path, class:"nu text-black" do |elektro|
+        =link_to root_path, class:" nu text-black" do |elektro|
             = image_tag  "img5.png", size: "116x116"
             br
             |Fliesen »
