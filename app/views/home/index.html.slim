@@ -17,11 +17,13 @@
         .col-10.offset-1.border-bottom.border-2.border-dark.pt-2
             
     .row
-        .col-12.color.style.text-center.size
+        .col-12.color.style.open-sans-haus.text-center.size
            | Techno-Immoservice
         .col-12.style.color style="font-size: 35px; font-weight: 700;"
             |Holen Sie verschiedene Angebote ein, aber wir geben alles aus einer Hand
-    
+    .row.bg-light
+        
+        = render "shared/indexmenu"
     .row 
         .col-1 
         .col-9 
@@ -65,9 +67,8 @@
             |Händy & Whatsapp ;   +43 660 38 456 36    
     .row
         .col-12 
-            h1
-                |Kundenreferenzen :
+            |Kundenreferenzen ;
         .col-12
-            =link_to "https://www.my-hammer.at/auftragnehmer/techno-remont-meszaros", "https://www.my-hammer.at/auftragnehmer/techno-remont-meszaros", class:"btn btn-link"
-            
-    
+            |https://www.my-hammer.at/auftragnehmer/techno-remont-meszaros
+    .row.bg-light.border.rounded-custom.m-4.border-5.border-dark
+        = render "shared/indexmenu"
