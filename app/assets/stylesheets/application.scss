@@ -71,14 +71,14 @@
     color: red;
     height: 100px;
   }
+  .nu {
+    text-decoration: none;
+    
+}
 
-  ul.custom-list {
-    list-style-type: none;
+.nu:hover {
+    text-decoration: none;
 }
-ul.custom-list li::before {
-    content: '*';
-    margin-right: 8px;
-    color: black;
-}
+ 
 
   

@@ -1,16 +1,16 @@
 
-.container.border.border-dark.border-2.bg-primary
+.container-fluid.border.border-dark.border-2.bg-primary
     .row 
-        .col-xs-12.col-lg-12.open-sans-haus.color style="font-size: 30px;"
+        .col-11.offset-1.open-sans-haus.color style="font-size: 30px;"
             |Wir beraten Sie gerne in folgenden Sprachen
     .row
-        .col.text-center
+        .col-xs-6.col-lg-3.text-center
             = image_tag  "de.png", size: "90x56"
-        .col.text-center
+        .col-xs-6.col-lg-3.text-center
             = image_tag  "en.png", size: "90x56"
-        .col.text-center
+        .col-xs-6.col-lg-3.text-center
             = image_tag  "hu.png", size: "90x56"
-        .col.text-center
+        .col-xs-6.col-lg-3.text-center
             = image_tag  "hr.png", size: "90x56"
     .row
         
@@ -21,18 +21,18 @@
            | Techno-Immoservice
         .col-12.style.color style="font-size: 35px; font-weight: 700;"
             |Holen Sie verschiedene Angebote ein, aber wir geben alles aus einer Hand
-    .row
+    .row.bg-light
         
         = render "shared/indexmenu"
     .row 
         .col-1 
         .col-9 
-            ul.custom-list
+            ul.custom-list.freeman-regular
                 li Das ist unmöglich! - Das kennen wir nicht!
                 li Auf Wunder müssen Sie kurz warten,
                 li Ab Morgen, werden wir auch zaubern!
     .row 
-        .col-12 
+        .col-12.color.style style="font-size: 35px; font-weight: 700;" 
             |Meisterhafte Montagen mit gehobenen Qualitätsniveau
     .row
         .col-12
@@ -70,6 +70,6 @@
             |Kundenreferenzen ;
         .col-12
             |https://www.my-hammer.at/auftragnehmer/techno-remont-meszaros
-    .row 
+    .row.bg-primary 
         = render "shared/indexmenu"
 
