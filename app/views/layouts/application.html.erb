@@ -14,10 +14,14 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+  <body class="bg-success">
     
     <%= render "shared/menu" %>
     <div class="container pt-4">
     <%= yield %>
+    </div>
+    <div class="bg-light footer">
+      <%= render "shared/footer" %>
+    </div>
   </body>
 </html>
