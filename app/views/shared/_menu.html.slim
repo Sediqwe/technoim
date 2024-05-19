@@ -12,66 +12,50 @@ nav.navbar.fixed-top.navbar-expand-lg.navbar-dark.bg-dark
           
           
         li.nav-item
-          =link_to "Haushaltservice", haushaltservice_path,class: ("nav-link rounded #{" active text-dark" if current_page?(haushaltservice_path)}")          
+          =link_to "Haushaltservice", haushalt_path,class: ("nav-link rounded #{" active text-dark" if current_page?(haushalt_path)}")          
         li.nav-item
-          =link_to "Planungen & 3D Architektur", root_path, class: "nav-link"
+          =link_to "Planungen & 3D Architektur", planung_path,class: ("nav-link rounded #{" active text-dark" if current_page?(planung_path)}")          
+          
         li.nav-item.dropdown
-          a#navbarDropdown.nav-link.dropdown-toggle[href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"]
-            |  Renovationen & Umbau 
+          = link_to "Renovationen & Umbau", planung_path, {class: "navbarDropdown nav-link dropdown-toggle rounded #{" active text-dark" if current_page?(elektro_path) ||current_page?(fliesen_path) ||current_page?(boden_path)||current_page?(installator_path) ||current_page?(trockenbau_path) }", id: "navbarDropdown", href: "#", role: "button", data: { bs_toggle: "dropdown" }, aria: { expanded: "false" }}
+          
           ul.dropdown-menu[aria-labelledby="navbarDropdown"]
             li
-              a.dropdown-item[href="#"]
-                | Elektroinstallationen  & Modernisierungen
+              = link_to "Elektroinstallationen  & Modernisierungen", elektro_path, class: "dropdown-item"              
             li
               hr.dropdown-divider
             li
-              a.dropdown-item[href="#"]
-                | Installatör & Sanitärarbeiten
+              = link_to "Installatör & Sanitärarbeiten", installator_path, class: "dropdown-item"                              
             li
               hr.dropdown-divider
             li
-              a.dropdown-item[href="#"]
-                | BODENBELÄGE Parkett  & Laminat
+              = link_to "BODENBELÄGE Parkett  & Laminat", boden_path, class: "dropdown-item"                              
             li
               hr.dropdown-divider
             li
-              a.dropdown-item[href="#"]
-                | FLIESEN VERLEGEN Boden  & Wandfliesen
+              = link_to "FLIESEN VERLEGEN Boden  & Wandfliesen", fliesen_path, class: "dropdown-item"                               
             li
               hr.dropdown-divider
             li
-              a.dropdown-item[href="#"]
-                | Trockenbau Wandaufbau  &  Zwischendecken
+              = link_to "Trockenbau Wandaufbau  &  Zwischendecken", trockenbau_path, class: "dropdown-item"                               
         li.nav-item.dropdown
-          a#navbarDropdown.nav-link.dropdown-toggle[href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"]
-            |  Service & Montagedienstleisstungen 
+          = link_to "Service & Montagedienstleisstungen", service_path, {class: "navbarDropdown nav-link dropdown-toggle rounded #{" active text-dark" if current_page?(service_path) ||current_page?(netzwerk_path) ||current_page?(lampen_path)||current_page?(vorhang_path) ||current_page?(wasser_path) ||current_page?(antennen_path) }", id: "navbarDropdown", href: "#", role: "button", data: { bs_toggle: "dropdown" }, aria: { expanded: "false" }}
           ul.dropdown-menu[aria-labelledby="navbarDropdown"]
             li
-              a.dropdown-item[href="#"]
-                | Servicedienstleistungen
-          
+              = link_to "Servicedienstleistungen", service_path, class: "dropdown-item"                              
             li
-              a.dropdown-item[href="#"]
-                | Netzwerktechnik
-          
+              = link_to "Netzwerktechnik", netzwerk_path, class: "dropdown-item"                              
             li
-              a.dropdown-item[href="#"]
-                | Lampenmontagen
-          
+              = link_to "Lampenmontagen", lampen_path, class: "dropdown-item"                              
             li
-              a.dropdown-item[href="#"]
-                | Vorhangschienen & Karnischen
-        
+              = link_to "Vorhangschienen & Karnischen", vorhang_path, class: "dropdown-item"  
             li
-              a.dropdown-item[href="#"]
-                | Wasserhanen & Abflüsse
-          
+              = link_to "Wasserhanen & Abflüsse", wasser_path, class: "dropdown-item"  
             li
-              a.dropdown-item[href="#"]
-                | Antennen & Satellitanlagen
+              = link_to "Antennen & Satellitanlagen", antennen_path, class: "dropdown-item"  
+                
         li.nav-item
-          a.nav-link[href="#"]
-            | Massmöbel & Zusammenbau
+          =link_to "Massmöbel & Zusammenbau", moebel_path,class: ("nav-link rounded #{" active text-dark" if current_page?(moebel_path)}")          
       form.d-flex
         input.form-control.me-2[type="search" id="search" placeholder="Search" aria-label="Search"]
         button.btn.btn-outline-success[type="submit"]

@@ -1,5 +1,18 @@
 Rails.application.routes.draw do
-  get "haushaltservice", to: 'haushaltservice#index'
+  get 'antennen', to: "antenne#index"
+  get 'wasser', to: "wasser#index"
+  get 'vorhang', to: "vorhang#index"
+  get 'lampen', to: "lampen#index"
+  get 'netzwerk', to: "netzwerk#index"
+  get 'service', to: "service#index"
+  get 'installator', to: "installator#index"
+  get 'moebel', to: "mobel#index"
+  get 'fliesen', to: "fliesen#index"
+  get 'boden', to: "boden#index"
+  get 'trockenbau', to: "trockenbau#index"
+  get 'elektro', to: "elektro#index"
+  get 'planung', to: "planung#index"
+  get "haushalt", to: 'haushaltservice#index'
   root 'home#index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
