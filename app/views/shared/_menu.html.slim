@@ -6,9 +6,7 @@ nav.navbar.fixed-top.navbar-expand-lg.navbar-dark.bg-dark
     #navbarSupportedContent.collapse.navbar-collapse
       ul.navbar-nav.me-auto.mb-2.mb-lg-0
         li.nav-item
-        = link_to "HOME", root_path, class: ("nav-link rounded #{" active text-dark" if current_page?(root_path)}")
-
-          
+        = link_to "HOME", root_path, class: ("nav-link rounded #{" active text-dark" if current_page?(root_path)}")        
           
         li.nav-item
           =link_to "Haushaltservice", haushalt_path,class: ("nav-link rounded #{" active text-dark" if current_page?(haushalt_path)}")          
@@ -28,11 +26,11 @@ nav.navbar.fixed-top.navbar-expand-lg.navbar-dark.bg-dark
             li
               hr.dropdown-divider
             li
-              = link_to "BODENBELÄGE Parkett  & Laminat", boden_path, class: "dropdown-item"                              
+              = link_to "Bodenbeläge Parkett & Laminat", boden_path, class: "dropdown-item"                              
             li
               hr.dropdown-divider
             li
-              = link_to "FLIESEN VERLEGEN Boden  & Wandfliesen", fliesen_path, class: "dropdown-item"                               
+              = link_to "Fliesen verlegen Boden & Wandfliesen", fliesen_path, class: "dropdown-item"                               
             li
               hr.dropdown-divider
             li
@@ -55,10 +53,7 @@ nav.navbar.fixed-top.navbar-expand-lg.navbar-dark.bg-dark
                 
         li.nav-item
           =link_to "Massmöbel & Zusammenbau", moebel_path,class: ("nav-link rounded #{" active text-dark" if current_page?(moebel_path)}")          
-      form.d-flex
-        input.form-control.me-2[type="search" id="search" placeholder="Search" aria-label="Search"]
-        button.btn.btn-outline-success[type="submit"]
-          | Search
+      
 
           
 

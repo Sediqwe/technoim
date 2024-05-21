@@ -1,7 +1,7 @@
 
-.container-fluid.border.border-dark.border-2.bg-primary
+.container-fluid.bg-primary
     .row 
-        .col-11.offset-1.open-sans-haus.color style="font-size: 30px;"
+        .col-11.offset-1.color style="font-size: 30px;"
             |Wir beraten Sie gerne in folgenden Sprachen
     .row
         .col-xs-6.col-lg-3.text-center
@@ -17,7 +17,7 @@
         .col-10.offset-1.border-bottom.border-2.border-dark.pt-2
             
     .row
-        .col-12.color.style.open-sans-haus.text-center.size
+        .col-12.color.style.text-center.size
            | Techno-Immoservice
         .col-12.style.color style="font-size: 35px; font-weight: 700;"
             |Holen Sie verschiedene Angebote ein, aber wir geben alles aus einer Hand
@@ -27,7 +27,7 @@
     .row 
         .col-1 
         .col-9 
-            ul.custom-list.freeman-regular
+            ul.custom-list
                 li Das ist unmöglich! - Das kennen wir nicht!
                 li Auf Wunder müssen Sie kurz warten,
                 li Ab Morgen, werden wir auch zaubern!
@@ -64,11 +64,12 @@
             |…dann genügt ein Anruf und Ihr Wunsch geht schon bald in Erfüllung!
     .row
         .col-12 
-            |Händy & Whatsapp ;   +43 660 38 456 36    
+            |Händy & Whatsapp:   +43 660 38 456 36    
     .row
-        .col-12 
-            |Kundenreferenzen ;
         .col-12
-            |https://www.my-hammer.at/auftragnehmer/techno-remont-meszaros
+             h3
+                |Kundenreferenzen:
+                = link_to "https://www.my-hammer.at/auftragnehmer/techno-remont-meszaros", "https://www.my-hammer.at/auftragnehmer/techno-remont-meszaros", target: "_blank"
+            
     .row.bg-light.border.rounded-custom.m-4.border-5.border-dark
         = render "shared/indexmenu"
