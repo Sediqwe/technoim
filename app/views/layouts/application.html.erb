@@ -6,10 +6,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300..800&family=Shadows+Into+Light&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Freeman&family=Open+Sans:ital,wght@1,300..800&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">  
     <%= stylesheet_link_tag "application", "data-turbo-track": "load" %>
     <%= javascript_importmap_tags %>
   </head>
@@ -19,7 +16,25 @@
     <%= render "shared/menu" %>
     <div class="container pt-4">
     <%= yield %>
+    <button id="backToTop" class="btn btn-link"><i class="bi bi-arrow-up-circle" style="font-size: 2rem; color: black;"></i></button>
     </div>
-    
+    <script>
+        // A gomb eleme
+        const backToTopButton = document.getElementById('backToTop');
+
+        // Az ablak görgetési eseményének kezelése
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopButton.style.display = "block"; // Gomb megjelenítése
+            } else {
+                backToTopButton.style.display = "none"; // Gomb elrejtése
+            }
+        };
+
+        // A gomb kattintási eseményének kezelése
+        backToTopButton.onclick = function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' }); // Görgetés az oldal tetejére simán
+        };
+    </script>
   </body>
 </html>

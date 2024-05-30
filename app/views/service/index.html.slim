@@ -1,10 +1,10 @@
-.container-fluid.bg-red.text-yellow
-    .row
-        .col-lg-3.col-sm-12
-        .col-lg-6.col-sm-12
+.container
+    .row 
+        .col-xl-10.offset-xl-1
             .row
                 .col-12
-                    h3.text-center  
+                    
+                    h1.text-center  
                         b
                             |Service  &  Montagedienstleisstungen
             .row 
@@ -43,12 +43,47 @@
                     |Wir arbeiten fast immer mit namhafter SPAUN Komponenten, damit Sie auch nach 10 Jahren immer noch einen perfektes Empfang haben.
             .row
                 .col-3
-                    =link_to root_path do |link|
-                        .card2.rounded (style="width: 210px;")
+                    =link_to root_path, class: "nu" do |link|
+                        .card2.rounded
                             .img-holder
                                 = image_tag  "NETZWERKTECHNIK.jpg", class:".card-img-top", size: "250x280"
                             .card-body2.text-center
                                 h5.pt-2.card-title Netzwerktechnik
+                .col-3
+                    =link_to root_path, class: "nu" do |link|
+                        .card2.rounded 
+                            .img-holder
+                                = image_tag  "HAUSHALTSGERATEN-EINBAU-und-REPARATUR.jpg", class:".card-img-top", size: "250x280"
+                            .card-body2.text-center
+                                h5.pt-2.card-title Geräteinbau & Reparaturen
+                .col-3
+                    =link_to root_path, class: "nu" do |link|
+                        .card2.rounded
+                            .img-holder
+                                = image_tag  "LAMPENMON.jpg", class:".card-img-top", size: "250x280"
+                            .card-body2.text-center
+                                h5.pt-2.card-title Lampenmontagen
+                .col-3
+                    =link_to root_path, class: "nu" do |link|
+                        .card2.rounded
+                            .img-holder
+                                = image_tag  "VORHANGSCHIENEN-und-KARNISCHEN-.jpg", class:".card-img-top", size: "250x280"
+                            .card-body2.text-center
+                                h5.pt-2.card-title Vorhangschienen  &  Karnischen
+                .col-3
+                    =link_to root_path, class: "nu" do |link|
+                        .card2.rounded
+                            .img-holder
+                                = image_tag  "KÜCHE-und-BADEZIMMER.jpg", class:".card-img-top", size: "250x280"
+                            .card-body2.text-center
+                                h5.pt-2.card-title Wasserhanen  & Abflüsse
+                .col-3
+                    =link_to root_path, class: "nu" do |link|
+                        .card2.rounded
+                            .img-holder
+                                = image_tag  "ANTENNEN-und-SATELLITENANLAGEN-.jpg", class:".card-img-top", size: "250x280"
+                            .card-body2.text-center
+                                h5.pt-2.card-title Antennen & Satellitanlagen
             br
             br
                             
