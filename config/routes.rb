@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'renovationen', to: 'renovationen#index'
   get 'antennen', to: "antenne#index"
   get 'wasser', to: "wasser#index"
   get 'vorhang', to: "vorhang#index"

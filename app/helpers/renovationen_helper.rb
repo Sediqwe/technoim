@@ -1,0 +1,2 @@
+module RenovationenHelper
+end
