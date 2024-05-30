@@ -36,10 +36,13 @@ nav.navbar.fixed-top.navbar-expand-lg.navbar-dark.bg-dark
             li
               = link_to "Trockenbau Wandaufbau  &  Zwischendecken", trockenbau_path, class: "dropdown-item"                               
         li.nav-item.dropdown
-          = link_to "Service & Montagedienstleisstungen", service_path, {class: "navbarDropdown nav-link dropdown-toggle rounded #{" active text-dark" if current_page?(service_path) ||current_page?(netzwerk_path) ||current_page?(lampen_path)||current_page?(vorhang_path) ||current_page?(wasser_path) ||current_page?(antennen_path) }", id: "navbarDropdown", href: "#", role: "button", data: { bs_toggle: "dropdown" }, aria: { expanded: "false" }}
+          = link_to "Service & Montagedienstleisstungen", service_path, {class: "navbarDropdown nav-link dropdown-toggle rounded #{" active text-dark" if  current_page?(servicedienst_path) || current_page?(service_path) ||current_page?(netzwerk_path) ||current_page?(lampen_path)||current_page?(vorhang_path) ||current_page?(wasser_path) ||current_page?(antennen_path) }", id: "navbarDropdown", href: "#", role: "button", data: { bs_toggle: "dropdown" }, aria: { expanded: "false" }}
           ul.dropdown-menu[aria-labelledby="navbarDropdown"]
             li
-              = link_to "Servicedienstleistungen", service_path, class: "dropdown-item"   
+              = link_to "Service  &  Montagedienstleisstungen", service_path, class: "dropdown-item"   
+              hr.dropdown-divider 
+            li
+              = link_to "Servicedienstleistungen", servicedienst_path, class: "dropdown-item"   
               hr.dropdown-divider                           
             li
               = link_to "Netzwerktechnik", netzwerk_path, class: "dropdown-item"                              
