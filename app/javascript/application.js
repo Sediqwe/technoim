@@ -5,3 +5,7 @@ import "popper"
 import "bootstrap"
 import "custom"
 //= require jquery
+import "trix"
+import "@rails/actiontext"
+
+//= require tinymce

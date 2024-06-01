@@ -1,10 +1,30 @@
 .container
     .row 
         .col-xl-10.offset-xl-1
+            .row 
+                .col-10 
+                   
+                    
+                    = form_with(model: @article, url: lampen_path) do |form|
+                        - if @article.errors.any?
+                            #error_explanation
+                            h2 = pluralize(@article.errors.count, "error") + " prohibited this article from being saved:"
+                            ul
+                                - @article.errors.full_messages.each do |message|
+                                li = message
+
+                        .field
+                            = form.text_area :content, class: "tinymce", rows: 20, cols: 120
+
+                        .actions
+                            = form.submit
+                - @lampen.each do |lamp|
+                        = lamp.content
             .row
                 .col-12.text-center
                     h1 
                         b Lampenmontagen
+
             .row 
                 .col-4
                     =image_tag "lampen_img2.jpg", class: "img-fluid"

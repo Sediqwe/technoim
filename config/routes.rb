@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get 'planung', to: "planung#index"
   get "haushalt", to: 'haushaltservice#index'
   root 'home#index'
+  post "lampen", to: "lampen#create"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
