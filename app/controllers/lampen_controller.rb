@@ -4,22 +4,21 @@ class LampenController < ApplicationController
     @lampen = Article.all
   end
   def new
-    @lampen = Article.new
+    @article = Article.new
   end
+
   def create
-    @lampen = Article.new(lampens_params)
-   respond_to do |format|
-      if @lampen.save
-        format.html { redirect_to lampen_url(), notice: "Game was successfully created." }
-       
-      else
-        format.html { render :new, status: :unprocessable_entity }
-       
-      end
+    @article = Article.new(article_params)
+    if @article.save
+      # sikeres mentés logika
+    else
+      render :new
     end
   end
+
   private
-  def lampens_params
-    params.require(:article).permit(:content, link: "lampen")
+
+  def article_params
+    params.require(:article).permit(:content)
   end
 end

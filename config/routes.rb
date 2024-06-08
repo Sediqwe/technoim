@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :articles
   get 'servicedienst', to: "servicedienst#index"
   get 'renovationen', to: 'renovationen#index'
   get 'antennen', to: "antenne#index"

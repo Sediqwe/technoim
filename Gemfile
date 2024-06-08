@@ -2,6 +2,7 @@ source "https://rubygems.org"
 
 ruby "3.3.0"
 gem 'actiontext'
+gem 'simple_form'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '7.1.0'
@@ -44,7 +45,6 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 gem 'slim-rails'
-gem 'simple_form'
 gem 'mini_magick'
 gem 'rmagick'
 gem 'ransack'

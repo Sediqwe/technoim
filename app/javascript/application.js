@@ -8,4 +8,4 @@ import "custom"
 import "trix"
 import "@rails/actiontext"
 
-//= require tinymce
+

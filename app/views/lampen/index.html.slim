@@ -3,22 +3,13 @@
         .col-xl-10.offset-xl-1
             .row 
                 .col-10 
-                   
-                    
-                    = form_with(model: @article, url: lampen_path) do |form|
-                        - if @article.errors.any?
-                            #error_explanation
-                            h2 = pluralize(@article.errors.count, "error") + " prohibited this article from being saved:"
-                            ul
-                                - @article.errors.full_messages.each do |message|
-                                li = message
-
-                        .field
-                            = form.text_area :content, class: "tinymce", rows: 20, cols: 120
-
-                        .actions
-                            = form.submit
-                        = hidden_field_tag :authenticity_token, form_authenticity_token
+                   = form_with model: @article, url: articles_path, method: :post, local: true do |form| 
+                    .field
+                        = form.text_area :content, class: "tinymce"
+                    .actions
+                        = form.submit "Beküldés", class: "btn btn-primary", id: "bekuldes"
+                        
+                        
                 - @lampen.each do |lamp|
                         = lamp.content
             .row
@@ -76,7 +67,6 @@
                     |Fullspectrum-LED
                     br
                     =image_tag "lampen_img8.jpg", class: "img-fluid"
-
 
 
 
