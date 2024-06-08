@@ -1,0 +1,2 @@
+class Metascene < ApplicationRecord
+end

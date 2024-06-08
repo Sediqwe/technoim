@@ -3,15 +3,19 @@
         .col-xl-10.offset-xl-1
             .row 
                 .col-10 
-                   = form_with model: @article, url: articles_path, method: :post, local: true do |form| 
-                    .field
-                        = form.text_area :content, class: "tinymce"
-                    .actions
-                        = form.submit "Beküldés", class: "btn btn-primary", id: "bekuldes"
-                        
+                    = simple_form_for(@metascene) do |f|
+                        = f.error_notification
+                        = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
+
+                        .form-inputs
+                            = f.input :content
+                            = f.hidden_field :link, value: "lampen" 
+
+                        .form-actions
+                            = f.button :submit     
                         
                 - @lampen.each do |lamp|
-                        = lamp.content
+                        = lamp.content.html_safe
             .row
                 .col-12.text-center
                     h1 
