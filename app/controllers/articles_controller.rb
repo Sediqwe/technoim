@@ -1,5 +1,4 @@
 class ArticlesController < ApplicationController
-  skip_before_action :verify_authenticity_token
   def index
   end
 
@@ -8,7 +7,7 @@ class ArticlesController < ApplicationController
 
   end
   def create
-    @article = Article.new(article_params)
+    @article = Article.new(content: params[:content, link: "lampen"])
 
     respond_to do |format|
       if @article.save
