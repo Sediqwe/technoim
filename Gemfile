@@ -5,7 +5,7 @@ gem 'actiontext'
 gem 'simple_form'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem 'rails', '7.0.1'
+gem 'rails'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
